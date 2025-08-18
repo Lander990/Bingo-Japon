@@ -36,6 +36,7 @@ body {
   width: 30px;
   height: 30px;
   margin: 1px;
+  border-radius: 50%;
 }
 select, button {
     background-color: #1e1e1e;
