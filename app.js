@@ -1,3 +1,4 @@
+import { getDatabase, ref, set, onValue, off } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 const db = window.firebaseDB;
 const tablero = document.getElementById("tablero");
 const casillasTablero = {
