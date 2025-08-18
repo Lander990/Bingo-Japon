@@ -56,9 +56,16 @@ function crearTablero() {
             imagen.classList.add("contenedorImagen");
             celda.appendChild(imagen);
 
-            celda.addEventListener("click", () => {
+            celda.addEventListener("click", async () => {
                 const markRef = ref(db, `${tableroActual}/userMarks/${playerId}/${r}_${c}`);
-                set(markRef, ! Boolean(markRef.value));
+                const snapshot = await getDatabase(markRef);
+                if (snapshot.exists() && snapshot.val() === true) {
+                    //Desmarco
+                    set(markRef, false)
+                } else {
+                    set(markRef, true)
+                }
+                //set(markRef, ! Boolean(markRef.value));
             });
 
             tablero.appendChild(celda);
