@@ -58,7 +58,7 @@ function crearTablero() {
 
             celda.addEventListener("click", () => {
                 const markRef = ref(db, `${tableroActual}/userMarks/${playerId}/${r}_${c}`);
-                set(markRef, true);
+                set(markRef, ! Boolean(markRef.value));
             });
 
             tablero.appendChild(celda);

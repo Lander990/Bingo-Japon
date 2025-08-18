@@ -1,7 +1,11 @@
+* {
+    color: #fff;
+}
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
+  background-color: black;
 }
 
 #tablero {
@@ -12,14 +16,15 @@ body {
 }
 
 .celda {
-  border: 2px solid #333;
+  border: 2px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   font-size: 12px;
   text-align: center;
-  background-color: #fff;
+  color: #fff;
+  /* background-color: #fff; */
   flex-direction: column;
 }
 
