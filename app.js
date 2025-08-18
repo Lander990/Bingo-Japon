@@ -58,7 +58,7 @@ function crearTablero() {
 
             celda.addEventListener("click", async () => {
                 const markRef = ref(db, `${tableroActual}/userMarks/${playerId}/${r}_${c}`);
-                const snapshot = await getDatabase(markRef);
+                const snapshot = await get(markRef);
                 if (snapshot.exists() && snapshot.val() === true) {
                     //Desmarco
                     set(markRef, false)
