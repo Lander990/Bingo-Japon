@@ -85,13 +85,16 @@ function marcarCasillas() {
         for (let jugador in marcas) {
             for (let claveCelda in marcas[jugador]) {
                 const [r, c] = claveCelda.split("_");
+                const valor = marcas[jugador][claveCelda];
+                if (valor) {
                 const celda = document.querySelector(`.celda[data-row='${r}'][data-col='${c}']`);
-                if (celda) {
-                    const imagenContenedor = celda.querySelector(".contenedorImagen");
-                    const img = document.createElement("img");
-                    img.src = `images/${jugador}.png`;
-                    img.alt = jugador;
-                    imagenContenedor.appendChild(img);
+                    if (celda) {
+                        const imagenContenedor = celda.querySelector(".contenedorImagen");
+                        const img = document.createElement("img");
+                        img.src = `images/${jugador}.png`;
+                        img.alt = jugador;
+                        imagenContenedor.appendChild(img);
+                    }
                 }
             }
         }
