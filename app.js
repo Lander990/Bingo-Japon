@@ -48,7 +48,7 @@ function crearTablero() {
             celda.classList.add("celda");
             celda.dataset.row = r;
             celda.dataset.col = c;
-            celda.textContent = frases[r * tamanyo * c];
+            celda.textContent = frases[r * tamanyo + c];
 
             const imagen = document.createElement("div");
             imagen.classList.add("contenedorImagen");
