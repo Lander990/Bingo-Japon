@@ -35,6 +35,7 @@ document.getElementById("selectorJugador").addEventListener("change", (e) =>{
 document.getElementById("selectorTablero").addEventListener("change", (e) =>{
     tableroActual = e.target.value;
     crearTablero();
+    marcarCasillas();
 });
 
 //Creo el tablero dinámico según el tamaño
