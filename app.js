@@ -1,21 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.15.0/firebase-app.js";
-import { getDatabase, ref, set, onValue, off } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
-
-// Config firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBtbP9FJMWbqWIiNyW6pCQddx8LxpR-Iqw",
-  authDomain: "bingo-japon.firebaseapp.com",
-  databaseURL: "https://bingo-japon-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "bingo-japon",
-  storageBucket: "bingo-japon.firebasestorage.app",
-  messagingSenderId: "391006558118",
-  appId: "1:391006558118:web:2e0fc84cc24f94fc82a167"
-};
-
-//Inicializo FB
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-
+const db = window.firebaseDB;
 const tablero = document.getElementById("tablero");
 const casillasTablero = {
     "tableroDAMN": {
